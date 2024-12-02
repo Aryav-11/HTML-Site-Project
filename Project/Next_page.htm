@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+
+<head>
+    <!--Fav icon Work-->
+    <link rel="apple-touch-icon" sizes="180x180" href="Websites/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Websites/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Websites/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Websites/Favicon/site.webmanifest">
+    <link rel="mask-icon" href="Websites/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!--Meta Work-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Aryav Chaudhary">
+    <!--Icon Work-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Link Work-->
+    <link rel="stylesheet" href="Next_page.css">
+    <link rel="stylesheet" href="Slide_show.css">
+    <link rel="stylesheet" href="Index_stylesheet.css">
+    <title>My Programming Experience</title>
+    <script>
+        function initComparisons() {
+            var x, i;
+            /*find all elements with an "overlay" class:*/
+            x = document.getElementsByClassName("img-comp-overlay");
+            for (i = 0; i < x.length; i++) {
+                /*once for each "overlay" element:
+                pass the "overlay" element as a parameter when executing the compareImages function:*/
+                compareImages(x[i]);
+            }
+
+            function compareImages(img) {
+                var slider, img, clicked = 0,
+                    w, h;
+                /*get the width and height of the img element*/
+                w = img.offsetWidth;
+                h = img.offsetHeight;
+                /*set the width of the img element to 50%:*/
+                img.style.width = (w / 2) + "px";
+                /*create slider:*/
+                slider = document.createElement("DIV");
+                slider.setAttribute("class", "img-comp-slider");
+                /*insert slider*/
+                img.parentElement.insertBefore(slider, img);
+                /*position the slider in the middle:*/
+                slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+                slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+                /*execute a function when the mouse button is pressed:*/
+                slider.addEventListener("mousedown", slideReady);
+                /*and another function when the mouse button is released:*/
+                window.addEventListener("mouseup", slideFinish);
+                /*or touched (for touch screens:*/
+                slider.addEventListener("touchstart", slideReady);
+                /*and released (for touch screens:*/
+                window.addEventListener("touchend", slideFinish);
+
+                function slideReady(e) {
+                    /*prevent any other actions that may occur when moving over the image:*/
+                    e.preventDefault();
+                    /*the slider is now clicked and ready to move:*/
+                    clicked = 1;
+                    /*execute a function when the slider is moved:*/
+                    window.addEventListener("mousemove", slideMove);
+                    window.addEventListener("touchmove", slideMove);
+                }
+
+                function slideFinish() {
+                    /*the slider is no longer clicked:*/
+                    clicked = 0;
+                }
+
+                function slideMove(e) {
+                    var pos;
+                    /*if the slider is no longer clicked, exit this function:*/
+                    if (clicked == 0) return false;
+                    /*get the cursor's x position:*/
+                    pos = getCursorPos(e)
+                        /*prevent the slider from being positioned outside the image:*/
+                    if (pos < 0) pos = 0;
+                    if (pos > w) pos = w;
+                    /*execute a function that will resize the overlay image according to the cursor:*/
+                    slide(pos);
+                }
+
+                function getCursorPos(e) {
+                    var a, x = 0;
+                    e = e || window.event;
+                    /*get the x positions of the image:*/
+                    a = img.getBoundingClientRect();
+                    /*calculate the cursor's x coordinate, relative to the image:*/
+                    x = e.pageX - a.left;
+                    /*consider any page scrolling:*/
+                    x = x - window.pageXOffset;
+                    return x;
+                }
+
+                function slide(x) {
+                    /*resize the image:*/
+                    img.style.width = x + "px";
+                    /*position the slider:*/
+                    slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+                }
+            }
+        }
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+                if (!e.target.matches('.dropbtn')) {
+                    var myDropdown = document.getElementById("myDropdown");
+                    if (myDropdown.classList.contains('show')) {
+                        myDropdown.classList.remove('show');
+                    }
+                }
+            }
+            //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <style>
+        #headerid {
+            top: 0;
+            margin-top: -180px;
+        }
+        
+        .navbar {
+            z-index: 99;
+            margin-top: 200px;
+        }
+        /*Page Flipping Buttons Work*/
+        
+        * {
+            box-sizing: border-box
+        }
+        
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+        
+        .mySlides {
+            display: none
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        /* Slideshow container */
+        
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        /* Position the "next button" to the right */
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Caption text */
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        /* The dots/bullets/indicators */
+        
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        /* On smaller screens, decrease text size */
+        
+        @media only screen and (max-width: 300px) {
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 style="font-size: 40px;"><strong><b>My Programming Experience</b></strong></h1><br>
+        <div class="tooltip" id="icu"><b class="icu">Photo / Video Gallery</b>
+            <span class="tooltiptext" id="op">It Shows You My Best Photo's And Video's.</span>
+    </header>
+
+
+
+
+
+    <header class="header" id="headerid">
+        <div class="topnav" id="myTopnav">
+
+            <div class="dropdown" id="active">
+                <button class="dropbtn">My Old Websites
+              <i class="fa fa-caret-down"></i>
+            </button>
+                <div class="dropdown-content">
+                    <a href="Website_re_first.html">My First Website</a>
+                    <a href="Website first.html">My Second Website</a>
+                    <a href="Daddy's Birthday.htm">My Third Website</a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+    </header>
+    <!--Navigation bar work-->
+    <div class="navbar">
+        <a href="Index.htm" class="navba" id="acive"><i class="fa fa-home"></i> Home</a>&nbsp;&nbsp;
+        <a href="Dropdowns.html" class="navba">How It All Started</a>&nbsp;&nbsp;
+        <a href="" class="navba">My Programming Time</a>&nbsp;&nbsp;
+        <a href="Trying_to_make.html" class="navba">Trying To Make A Website</a>&nbsp;&nbsp;
+        <a href="My_First_JS_EX.htm" class="navba">First Time Using JavaScript</a>&nbsp;&nbsp;;
+
+
+        <a href="contact_us.html" class="navba" id="nav"><i class="fa fa-fw fa-envelope"></i> Contact Us.</a>&nbsp;&nbsp;
+        <a href="#" class="navba"><i class="fa fa-fw fa-user"></i> Login</a>
+
+    </div>
+
+    </header>
+    <br><br><br>
+    <!--Slide Show Work Here-->
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="img_nature_wide.jpg" style="width:100%" alt="Nature Photo">
+            <div class="text">Beutiful Nature</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="img_snow.jpg" style="width:100%" alt="Snow Photo">
+            <div class="text">Snow Mountains</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="img_mountains_wide.jpg" style="width:100%" alt="Mountains Photo">
+            <div class="text">Green Mountains</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <br><br><br><br><br><br>
+    <hr>
+
+    <h1>Compare Two Images</h1>
+
+    <p>Click and slide the blue slider to compare two images:</p>
+
+    <div class="img-comp-container">
+        <div class="img-comp-img">
+            <img src="Mom_and_dad.JPG" width="500" height="300">
+        </div>
+        <div class="img-comp-img img-comp-overlay">
+            <img src="MOM DAD.jpg" width="500" height="300">
+        </div>
+    </div>
+    <br><br>
+
+    <script>
+        /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+        initComparisons();
+    </script>
+    <h2 style="float: right;">Here Watch My Parents Close Up.</h2><br><br><br><br>
+    <img id="myImg" src="MOM_DAD-removebg-previewgood.png" alt="Mom And Dad" style="width:100%;max-width:300px">
+
+    <!-- The Modal work here expanding zoomedd window-->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01" alt="Modal">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+    <br><br><br>
+    <h2>My Parents Black and White</h2>
+    <img src="MOM_DAD-removebg-preview.png" alt="City" width="300" height="300" class="vid">
+
+
+    <br><br><br>
+    <h2>My Parents Video</h2>
+
+    <video width="500" height="500" controls class="video">
+        
+        <source src="Mom_video_audio.mp4" type="video/mp4">
+
+    </video>
+    <br><br><br><br>
+    <h2 style="float: right;">Thumbnail Image</h2><br>
+    <p style="float:right;">Click on the image to enlarge it.</p><br>
+
+    <a target="_blank" href="Small_mam.jpeg" style="float:right;" class="cat">&nbsp;&nbsp;
+ <img src="Small_mam.jpeg" alt="Mama And Mami" style="width:150px" >
+</a>
+    <br><br><br><br>
+    <h2 style="float: left;">Thumbnail Image</h2>
+    <p style="float: left;">Click on the image to enlarge it.</p>
+
+    <a target="_blank" href="Me_and_sister.JPG" class="cat" style="float: left;">
+        <img src="Me_and_sister.jpg" alt="Me And Sister" style="width:150px">
+    </a>
+
+    <br><br><br>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <br><br><br><br><br>
+    <h2 style="text-align: center;">Center Image</h2>
+    <img src="Family.jpg" style="width:50%;" alt="My Family" class="greem">
+    <br><br><br>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h1>Aryav</h1>
+                <p>Builder & Designer</p> <br>
+                <p>We love that guy</p>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+    <hr>
+    <!--Button Preveious and next work-->
+    &nbsp; &nbsp; <a href="Index.htm" class="previous">&#10094; Previous</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+    <a href="Next_page_2.html" class="nexti">Next &#10095;</a>
+
+
+    <br><br><br><br><br>
+    <footer id="footIt" class="Footer">
+        <p> My Programming Experience Teaches You, Motivates You And Brings A Good Nature Of You Towards Programming.
+        </p>
+        <p style="text-align: center;">Copyright 2021-2030 by Refsnes Data. All Rights Reserved.</p>
+        <i class="fa fa-thumbs-o-up" style="font-size:36px"></i>
+
+    </footer>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+
+<head>
+    <link rel="stylesheet" href="Dropdownstyle.css">
+    <title>My Programming Experience</title>
+    <!--Fav icon Work-->
+    <link rel="apple-touch-icon" sizes="180x180" href="Websites/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Websites/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Websites/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Websites/Favicon/site.webmanifest">
+    <link rel="mask-icon" href="Websites/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!--Meta Work-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=" description " content="Free Web tutorials ">
+    <meta name="keywords " content="HTML, CSS, JavaScript ">
+    <meta name="author " content="Aryav Chaudhary ">
+    <!--Icon Work-->
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+
+    <style>
+
+    </style>
+
+    <script>
+        function butFunction() {
+            document.getElementsByClassName('animate').src = " "
+        }
+
+        function myFunction(x) {
+            x.classList.toggle("change ");
+        }
+
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown ").classList.toggle("show ");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+                if (!e.target.matches('.dropbtn')) {
+                    var myDropdown = document.getElementById("myDropdown ");
+                    if (myDropdown.classList.contains('show')) {
+                        myDropdown.classList.remove('show');
+                    }
+                }
+            }
+            // Animation With Button and Square In It Moving When Pressing Button
+        var id = null;
+
+        function myMove() {
+            var elem = document.getElementById("myAnimation ");
+            var pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 10);
+
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="Webs">
+        <div class="topnav" id="myTopnav">
+
+            <div class="dropdown" id="active">
+                <button class="dropbtn">My Old Websites
+          <i class="fa fa-caret-down"></i>
+        </button>
+                <div class="dropdown-content">
+                    <a href="Website_re_first.html">My First Website</a>
+                    <a href="Website first.html">My Second Website</a>
+                    <a href="Daddy's Birthday.htm">My Third Website</a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <div class="header ">
+            <h1><strong><b>My Programming Experience</b></strong></h1>
+            <div class="tooltip " id="icu "><b class="icu ">How It All Started</b>
+                <span class="tooltiptext " id="op ">My Programming Interest</span>
+            </div>
+        </div>
+    </header>
+
+
+    <!--Navigation bar work-->
+
+    <div class="navbar">
+        <a href="Index.htm" class="navba" id="acive"><i class="fa fa-home"></i> Home</a>&nbsp;&nbsp;
+        <a href="Dropdowns.html" class="navba">How It All Started</a>&nbsp;&nbsp;
+        <a href="" class="navba">My Programming Time</a>&nbsp;&nbsp;
+        <a href="Trying_to_make.html" class="navba">Trying To Make A Website</a>&nbsp;&nbsp;
+        <a href="My_First_JS_EX.htm" class="navba">First Time Using JavaScript</a>&nbsp;&nbsp;;
+
+
+        <a href="contact_us.html" class="navba" id="nav"><i class="fa fa-fw fa-envelope"></i> Contact Us.</a>&nbsp;&nbsp;
+        <a href="#" class="navba"><i class="fa fa-fw fa-user"></i> Login</a>
+
+    </div>
+    <section>
+        <p class="mainIt">I have always thought that "How Do People Create Websites" and wished to create one, I have seen those animated icons,those links they design and a lot. But I couldn't make one.</p><br> <br>
+
+        <div class="animate" id="animate"></div>
+
+        <p class="mainIt">At that time my mama told me and thought HTML-5 basics and gave me a website name that I din't even know existed <a href="https://www.w3schools.com/default.asp" target="_blank" class="butt">
+    Visit W3schools.com</a>.
+        </p>
+        <br><br><br><br><br><br><br><br>
+        <p>
+            <button onclick="myMove()" class="animateButton12">Click Me</button>
+        </p>
+
+        <div id="myContainer">
+            <div id="myAnimation"></div>
+        </div>
+        <p class="mainIt" style="text-align:center;">That's where I learned most of my programming languages.
+            <div style="text-align: center;" class="mainIt">
+                Programming Languages I Learned At W3schools
+                <ol>
+                    <li style="text-align: center;">HTML</li>
+                    <li style="text-align: center;">CSS</li>
+                    <li style="text-align: center;">JavaScript</li>
+                </ol>
+                Programming Languages I Learned Other From W3schools
+                <ol>
+                    <li style="text-align: center;">C - by youtube tutorials.</li>
+                    <li style="text-align: center;">PHP - by youtube tutorials.</li>
+                    <li style="text-align: center;">Scratch - by youtube tutorials</li>
+                </ol>
+            </div>
+            <br><br>
+        </p>
+        <p class="mainIt">Well doing programming can be a pain. You can easily get confused but
+            <q>Programming Is Not Sceince, It Is An Art</q>
+            <q>Practice Makes The Man Better.</q> So practice is the key.
+            <q>Practice And Practice Today, For Sure That Practice Will Pay Off One Day.</q> Doing practice will improve not only your skills but you will gain new skills also.
+
+        </p>
+
+    </section>
+
+
+
+
+
+</body>
+
+</html>

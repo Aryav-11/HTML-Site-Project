@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+       <!--Fav icon Work-->
+   <link rel="apple-touch-icon" sizes="180x180" href="Websites/Favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="Websites/Favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="Websites/Favicon/favicon-16x16.png">
+   <link rel="manifest" href="Websites/Favicon/site.webmanifest">
+   <link rel="mask-icon" href="Websites/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#2b5797">
+   <meta name="theme-color" content="#ffffff">
+   <!--Meta Work-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Aryav Chaudhary">
+  <!--Icon Work-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--Link Work-->
+ <link rel="stylesheet" href="Index_stylesheet.css">
+  <title>My Programming Experience</title>
+  <script src="Index_Script.js"></script>
+  <style>
+      /*Tooltip Of header work here*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  #icu {
+    text-align: center;
+  }
+ .icu {
+    font-size: 40px;
+
+  }
+  #op {
+
+    font-size: 22px;
+  }
+  .buton {
+  position: relative;
+  background-color: #4CAF50;
+  border-radius: 15px;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.buton:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.buton:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+  </style>
+</head>
+<body>
+    <header class="header">
+        <div class="topnav" id="myTopnav">
+     
+          <div class="dropdown" id="active">
+            <button class="dropbtn">My Old Websites
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="Website_re_first.html">My First Website</a>
+              <a href="Website first.html">My Second Website</a>
+              <a href="Daddy's Birthday.htm">My Third Website</a>
+            </div>
+          </div> 
+          
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <h1><strong><b>My Programming Experience</b></strong></h1>
+        <div class="tooltip" id="icu"><b class="icu">Trying To Make A Website</b>
+            <span class="tooltiptext" id="op">How To Build A Website, And How I Build.</span>
+          </div>
+      </header>
+      
+     
+      
+      
+      
+        
+      <!--Navigation bar work-->
+    <div class="navbar">
+      <a href="Index.htm" class="navba" id="acive"><i class="fa fa-home"></i> Home</a>&nbsp;&nbsp;
+      <a href="Dropdowns.html" class="navba">How It All Started</a>&nbsp;&nbsp;
+      <a href="" class="navba">My Programming Time</a>&nbsp;&nbsp;
+      <a href="Trying_to_make.html" class="navba">Trying To Make A Website</a>&nbsp;&nbsp;
+      <a href="My_First_JS_EX.htm" class="navba">First Time Using JavaScript</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      
+     
+       <a href="contact_us.html" class="navba" id="nav"><i class="fa fa-fw fa-envelope"></i> Contact Us.</a>&nbsp;&nbsp;
+       <a href="#" class="navba" ><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
+    
+    <br><br><br><br>
+        
+    <div id="mySidenav" class="sidenav">
+      <a href="#Skil" id="about">Skills</a>
+      <a href="#Explained" id="blog">About</a>
+      <a href="#" id="projects">Projects</a>
+      <a href="#footIt" id="contact">Log In</a>
+    </div><br><br><br><br><br><br><br><br><br><br><br>
+    <!--Body work/writting-->
+    <!--type writter  work-->
+    <button onclick="typeWriter()" class="button">Click</button>
+    <p id="typeIt"></p>
+    <br><br>
+    <!--On click show div work here-->
+    <button onclick="myFunction()" class="buton">Click</button>
+    <div id="Daddy" style="display: none;">
+        Well To Make A Professional Website You Need To Have Some Basic Skills.
+          <div>
+            <h2 id="Skil">Checklist For Skills Needed:</h2>
+          </div>
+          <br><br>
+          <div id="myDIV" class="heder">
+            <h2 style="margin:5px">Skills Needed</h2>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          </div>
+          <ul id="myUL">
+           <li>HTML</li>
+           <li>CSS</li>
+           <li>JAVA SCRIPT</li>
+           <li>A CODE EDITOR AND A BROWSER (Any ex. Notepad, Chrome)</li>
+           <li>BOOTSTRAP (Optional)</li>
+           <li>PHP (If Only You Want To Create A Login Page)</li>
+           <li>SQL (To Build A WebSite That Shows Data From A Database)</li>
+          </ul>
+          <br><hr>
+          <div>
+            <h2>Checklist Explained:</h2>
+          </div>
+        <div id="Explained">
+          <br><br><br>
+          <div>
+            <h3>HTML -</h3>
+            <p>You need HTML in order to make frame of your website. As a example take the body structure, 
+              your body have bones well everyone have bones those bones are your framework - structure of
+               your body. Same with the websites HTML provides the framework of the websites. So in order
+                to create a website you need to have a basic understanding of HTML. 
+            </p>
+            </div><br><br>
+            <div>
+              <h3>CSS -</h3>
+              <p>You need CSS in order to make your website extraordinary. As a example take your bodie's
+                 muscles, your skin and hair colour they those are the what make you look beautiful. Same
+                  with websites CSS provides those colours, those muscles to the websites. So in the order to
+                   make website look beautiful you need to have a basic understanding of CSS.
+              </p>
+            </div><br><br>
+            <div>
+              <h3>JAVA SCRIPT -</h3>
+              <p>You need JAVA SCRIPT in order to make your website be reactive. As a example take your bodie's
+                 brain it commandes you to do this work when you call it. Same with the websites JAVA SCRIPT 
+                provides that reactivity, such as if press these button's it should do this. So in order to
+                 make a website be reactive you need to have a basic understanding of JAVA SCRIPT.
+              </p>
+            </div><br><br>
+            <div>
+              <h3>A CODE EDITOR AND A BROWSER (Any ex. Notepad, Chrome) -</h3>
+              <p>You need A CODE EDITOR AND A BROWSER (Any ex. Notepad, Chrome) in order to make your website.
+                As a example if we don't have earth we don't exist. Same with websites A CODE EDITOR AND A
+                 BROWSER (Any ex. Notepad, Chrome) provides a platform where the code should br written(Code Editor)
+                 and provides how it looks like(Browser). So in order to make a website you should have a 
+                 A CODE EDITOR AND A BROWSER (Any ex. Notepad, Chrome).
+              </p>
+            </div><br><br>
+            <div>
+              <h3>BOOTSTRAP (Optional) -</h3>
+              <p>You need BOOTSTRAP (Optional) in order to make your website extraordinary. As a example same as CSS take your bodie's
+                muscles, your skin and hair colour they those are the what make you look beautiful. Same with websites BOOTSTRAP provides
+                 those colours, those muscles to the websites, but CSS is faster then BOOTSTRAP. So in the order to make website look 
+                 beautiful you need to have a basic understanding of BOOTSTRAP.
+              </p>
+            </div><br><br>
+            <div>
+              <h3>PHP(Optional) -</h3>
+              <p>You need PHP in order to make your website form reactive. As a example JAVA SCRIPT makes elements, buttons reactive but
+                PHP makes form's reactive like the user filled the information in the form and that information should be tkaen to a 
+                specific page, and translate it that work is done by PHP. So in the order to make website's forms be reactive you need to 
+                have a basic understanding of PHP.
+              </p>
+            </div><br><br>
+            <div>
+              <h3>SQL(Optional) -</h3>
+              <p>You need SQl in order to make a website whose data is stored in large databases. As a example you have a websites that have
+                a large amount of data you use SQL to put that data in large databases, to manupilate and to acess them. So in order to make a
+                 website with large databases you need to have a basic understanding of SQL.
+              </p>
+            
+            </div>
+            </div>
+          </div>
+      
+      </div>
+      <script>
+        // Create a "close" button and append it to each list item
+        var myNodelist = document.getElementsByTagName("LI");
+        var i;
+        for (i = 0; i < myNodelist.length; i++) {
+          var span = document.createElement("SPAN");
+          var txt = document.createTextNode("\u00D7");
+          span.className = "close";
+          span.appendChild(txt);
+          myNodelist[i].appendChild(span);
+        }
+        
+        // Click on a close button to hide the current list item
+        var close = document.getElementsByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+          }
+        }
+        
+        // Add a "checked" symbol when clicking on a list item
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function(ev) {
+          if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+          }
+        }, false);
+        
+        // Create a new list item when clicking on the "Add" button
+        function newElement() {
+          var li = document.createElement("li");
+          var inputValue = document.getElementById("myInput").value;
+          var t = document.createTextNode(inputValue);
+          li.appendChild(t);
+          if (inputValue === '') {
+            alert("You must write something!");
+          } else {
+            document.getElementById("myUL").appendChild(li);
+          }
+          document.getElementById("myInput").value = "";
+        
+          var span = document.createElement("SPAN");
+          var txt = document.createTextNode("\u00D7");
+          span.className = "close";
+          span.appendChild(txt);
+          li.appendChild(span);
+        
+          for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+              var div = this.parentElement;
+              div.style.display = "none";
+            }
+          }
+        }
+        </script>
+        
+        
+       <script>
+    function myFunction() {
+     var y = document.getElementById('Daddy');
+     if (y.style.display == "none") {
+       y.style.display = "block";
+     } else {
+       y.style.display = "none";
+       
+     }
+    }
+         </script>
+    <script>
+        // Type writter work here
+var i = 0;
+var txt = 'Do You Want To Create A Professional Website By Your Own So Carry On In This Page.';
+var speed = 80;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("typeIt").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+    </script>
+    
+</body>
+</html>

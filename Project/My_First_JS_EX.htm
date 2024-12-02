@@ -1,0 +1,252 @@
+ <!DOCTYPE html> 
+ 
+ <html lang="en-UK">
+
+ <head>
+   <title>My Programming Experience</title>
+    <!--Fav icon Work-->
+    <link rel="apple-touch-icon" sizes="180x180" href="Websites/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Websites/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Websites/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Websites/Favicon/site.webmanifest">
+    <link rel="mask-icon" href="Websites/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!--Meta Work-->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1>
+   <meta name="description" content="Free Web tutorials">
+   <meta name="keywords" content="HTML, CSS, JavaScript">
+   <meta name="author" content="Aryav Chaudhary">
+   <!--Icon Work-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+    .it {
+      cursor: pointer
+    }  
+      .navbar {
+  position: rel;
+  overflow: hidden !important;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  
+ }
+ 
+ .navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ 
+ .dropdown {
+  float: left;
+  background-color: black;
+ }
+ 
+ .dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+ }
+ 
+ .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: #d9ffcc;
+  color: black;
+ }
+ 
+ .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+ }
+ 
+ .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+ }
+ 
+ .dropdown-content a:hover {
+  background-color: #ecffe6;
+  color: black;
+ }
+ 
+ .show {
+  display: block;
+ }
+ .navba {
+ background-color: black;
+ float:right;
+ 
+ }
+ #active {
+   background-color: #4CAF50;
+ }
+
+
+    </style>
+
+
+    <script>
+        function DevFunction() {
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+    }
+    function MonFunction() {
+    document.getElementById("demo").innerHTML = "Don't change it.";
+    }
+   
+    function MoFunction(Gretting) {
+    document.getElementById('demo').style.fontSize= "250%";
+    }
+    function myFunction(FirstName, LastName) 
+    {
+    alert(FirstName+" "+LastName);
+    }
+
+    function myFunction2(Gretting, Gretting2) 
+    {
+    alert(Gretting+" "+Gretting2);
+    }
+
+    
+
+    function wFunction(basic,basic2) {
+    alert(basic+" "+basic2)
+
+    }
+  
+    function sFunction() {
+       document.getElementById('demo').style.fontSize= "300%";
+       document.getElementById('demo').style.color= "red";
+    }
+
+    function dFunction() {
+      document.getElementById('b').style.fontSize= "300%";
+      document.getElementById('b').style.color= "orange";
+      document.getElementById('b').style.backgroundColor= "biege";
+      document.getElementById('b').innerHTML = "MY MAMA IS SUPER-DUPER";
+        }
+
+
+        function cFunction() {
+      document.getElementById('image').src = "pic_bulbon.gif";
+
+        }
+
+        function qFunction() {
+      document.getElementById('image').src = "pic_bulboff.gif";
+
+        }
+
+        function aFunction() {
+
+      document.getElementById('I').src = "Vivan.JPG";
+      
+
+        }
+        function bFunction() {
+            document.getElementById('I').src = "Small_mam_and_mami.JPG";
+        }
+
+    </script>
+
+ </head>
+
+ <body>
+    <header>
+        <h1 id="h1" style="text-align: center;"> <span style="background-color: oldlace; color: darkslategrey; border: 10px solid red; font-size: 250% ;">JavaScript WORK IN HERE<span style='font-size:100px;'> &#128548;</span> </span> </h1>
+    
+      </header>
+      <!--Navigation bar work-->
+
+<div class="navbar">
+  <a href="Index.htm" class="navba" id="active">Home</a>
+  <a href="Dropdowns.html" class="navba">How It All Started</a>
+  <a href="" class="navba">My Programming Time</a>
+  <a href="" class="navba">Trying To Make A Website</a>
+  <a href="My_First_JS_EX.htm" class="navba">First Time Using JavaScript</a>
+  <a href="" class="navba">First Time Using CSS</a>
+ 
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">My Old Websites
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="Website_re_first.html" target="_self">My 1st Website</a>
+    <a href="Website first.html" target="_self">My 2nd Website</a>
+    <a href="Daddy's Birthday.htm" target="_self">My 3rd Website</a>
+  </div>
+  </div>
+   <a href="contact_us.html" class="navba">Contact Us.</a>
+</div> <br>
+    
+      <marquee><h2 ><span style="border: 7px double dodgerblue; font-size: 200% ; font-family: jokerman; background-color: cyan;"><strong>JavaScript in Head</strong></span></h2></marquee>
+
+        <p id="b" style="font-size: 200% ;"> My Mama Is Great</p>
+        <hr>
+
+        <p id="demo" style="font-size: 200% ;">A Paragraph.</p>
+
+        <hr>
+        <img id="image"  src="pic_bulboff.gif" style= "width:100px ;"> <span style='font-size:100px;'> &#128548;</span>
+        <hr>
+        <img id="I" src="sweet_family.jpg" style="width: 300px ;">
+        <hr>
+
+            <button type="button" onclick="DevFunction()" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; border-radius: 30px ;font-size: 200% ;" class="it">Try it</button>
+            &nbsp;&nbsp;
+            <button type="button" onclick="MoFunction('Hello')" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ;  border-radius: 30px ;font-size: 200% ;" class="it">Try it too</button>
+            &nbsp;&nbsp;
+            <button type="button" onclick="MonFunction()" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; border-radius: 30px ;font-size: 200% ;" class="it">Click it</button>
+            &nbsp;&nbsp;
+            <button type="button" onclick="alert('Hello')" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; border-radius: 30px ;font-size: 200% ;"class="it">Try it</button>
+            &nbsp;&nbsp;
+            <button type="button" onclick="myFunction2('Hello','How are you')" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; border-radius: 30px ;font-size: 200% ;" class="it" >click on it</button>
+            &nbsp;&nbsp;
+            <button type="button" onclick="myFunction('Dev','Chaudhary')" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; border-radius: 30px ;font-size: 200% ;" class="it" >My Button</button>
+            &nbsp;&nbsp;
+            <button type="button" onclick="wFunction('Well','What?')" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; border-radius: 30px ;font-size: 200% ;" class="it" >Try it also</button>
+            &nbsp;&nbsp;
+            <button type="button" onclick="sFunction()" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; border-radius: 30px ;font-size: 200% ;"  class="it">Show style</button>
+            <br><br>
+            <button type="button" onclick="dFunction()" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; border-radius: 30px ;font-size: 200% ;" class="it" >Mama style</button>
+            
+            &nbsp;&nbsp;
+            <button type="button" onclick="cFunction()" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; border-radius: 30px ;font-size: 200% ;"  class="it" >On</button> 
+            &nbsp;&nbsp;
+            <button type="button" onclick="qFunction()" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; border-radius: 30px ;font-size: 200% ;" class="it"  >Off</button>
+            &nbsp;&nbsp;
+            <button type="button" onclick="aFunction()" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; font-size: 200% ; border-radius: 30px ;" class="it" >Vivan</button>
+            &nbsp;&nbsp;
+            <button type="button" onclick="bFunction()" style="color: rgb(0, 0, 0); background-color: oldlace; border: 4px solid blue ; font-size: 200% ; border-radius: 30px ;" class="it" >MAMA AND MAMI</button>
+            &nbsp;&nbsp;
+        
+            
+            <p id="v" style="font-size: 200% ;">Here is my youngest mama and mami. My mama's name is <b>Ayush Chaudhary</b>. My mami's name is <b>Monika Chaudhary</b>.
+            My both mama and mami are very helpful and kind. My mama teaches me programing and help's me a lot. They both love each and everyone.
+            </p>
+
+        <hr>
+        <p id="yo" style="font-size: 200% ;">Here is my youngest cousin. His name is <b>Vivan Chaudhary</b>. He is very cute and very funny.
+        He lives with my youngest mama and mami in Switzerland,Europe.<span style='font-size:100px ;'>&#128521;</span>
+        </p>
+ 
+</body>
+
+</html>

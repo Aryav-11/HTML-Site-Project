@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-Uk">
+
+    <head>
+         <!--Fav icon Work-->
+    <link rel="apple-touch-icon" sizes="180x180" href="Websites/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Websites/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Websites/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Websites/Favicon/site.webmanifest">
+    <link rel="mask-icon" href="Websites/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+   <!--Meta Work-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Aryav Chaudhary">
+    <!--Icon Work-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Link Work-->
+    <link rel="stylesheet" href="Slide_show.css">
+    <link rel="stylesheet" href="Index_stylesheet.css">
+    <title>My Programming Experience</title>
+    <style>
+      #headerid {
+        top: 0;
+        margin-top: -180px;
+
+      }
+      .navbar {
+        margin-top: 230px;
+      }
+        .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  #icu {
+    text-align: center;
+  }
+ .icu {
+    font-size: 30px;
+
+  }
+  #op {
+
+    font-size:17px;
+}
+    </style>
+    <script>
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+    }
+  }
+  
+    </script>
+    </head>
+
+    <body>
+        <header class="header">
+            <h1 style="font-size: 40px;"><strong><b>My Programming Experience</b></strong></h1>
+            <div class="tooltip" id="icu"><b class="icu">Members</b>
+                <span class="tooltiptext" id="op">It Tells You About Members.</span>
+          </header>
+           <!--Navigation bar work-->
+    
+           <header class="header" id = "headerid">
+            <div class="topnav" id="myTopnav">
+         
+              <div class="dropdown" id="active">
+                <button class="dropbtn">My Old Websites
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="Website_re_first.html">My First Website</a>
+                  <a href="Website first.html">My Second Website</a>
+                  <a href="Daddy's Birthday.htm">My Third Website</a>
+                </div>
+              </div> 
+              
+              <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+            
+          </header>
+            <!--Navigation bar work-->
+<div class="navbar">
+  <a href="Index.htm" class="navba" id="acive"><i class="fa fa-home"></i> Home</a>&nbsp;&nbsp;
+  <a href="Dropdowns.html" class="navba">How It All Started</a>&nbsp;&nbsp;
+  <a href="" class="navba">My Programming Time</a>&nbsp;&nbsp;
+  <a href="Trying_to_make.html" class="navba">Trying To Make A Website</a>&nbsp;&nbsp;
+  <a href="My_First_JS_EX.htm" class="navba">First Time Using JavaScript</a>&nbsp;&nbsp;;
+  
+ 
+   <a href="contact_us.html" class="navba" id="nav"><i class="fa fa-fw fa-envelope"></i> Contact Us.</a>&nbsp;&nbsp;
+   <a href="#" class="navba" ><i class="fa fa-fw fa-user"></i> Login</a>
+  
+</div>
+      <br><br><br><br><br><br><br><br><br>
+      <div class="row">
+        <div class="column" id = "icard_mg1">
+          <div class="card">
+            <img src="Me_photo.jpeg" alt="Me" style="width:100%">
+            <div class="container">
+              <h2>Aryav Chaudhary</h2>
+              <p class="title">Designer & Builder</p>
+              <p>I Always Wanted To Make A Website And Here It Is Currentlyy You Are Watching It. All This Because Of My Family.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column" id = "card_img2">
+          <div class="card">
+            <img src="Mom_Photo.png" alt="Mom" style="width:100%; height: 120%;">
+            <div class="container">
+              <h2>Neetu Singh[Mom]</h2>
+              <p class="title">Idea Provider</p>
+              <p>She Is My Mom. She Is The Only Who Made Me Able To Create These Websites. Only Becuse Of Her I Can Do Coding.</p>
+              <p>example@example.com</p> 
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column" id = "card_img3">
+          <div class="card">
+            <img src="Small_mam.jpeg" alt="Uncle / Mama" style="width:100%"> 
+            <div class="container">
+              <h2>Ayush Chaudhary</h2>
+              <p class="title">Teacher</p>
+              <p>My Mama He Thought Me Diffrent Programming Languages. All These Websites Are Created By Languages He Thaught.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <br><br><br>
+    
+        &nbsp; &nbsp; <a href="Next_page.htm" class="previous">&#10094; Previous</a>
+        
+    </body>
+
+</html>
